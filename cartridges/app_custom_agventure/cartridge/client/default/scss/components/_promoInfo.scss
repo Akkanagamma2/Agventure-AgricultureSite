@@ -1,0 +1,40 @@
+.promo-info {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    padding:1px 10px 1px 5px;
+    background-color: orange;
+    border-radius:10px 0px 20px 0px;
+    @media (max-width: 543px) {
+        font-size: 0.8125em !important;
+    }
+    @media (max-width: 768px) and (min-width: 544px) {
+        font-size: 0.8675em !important;
+    }
+    @media (min-width: 992px) {
+        font-size: 1em;
+    }
+}
+
+
+.promo-info-pdp {
+    position: absolute;
+    padding:1px 5px 1px 10px;
+    background-color: orange;
+    border-radius:10px 0px 10px 0px;
+    @media (max-width: 543px) {
+        font-size: 0.8125em !important;
+        top: 160px !important;
+        left: 20px !important;
+    }
+    @media (max-width: 768px) and (min-width: 544px) {
+        font-size: 0.96em !important;
+        top: 160px !important;
+        left: 20px !important;
+    }
+    @media (min-width: 992px) {
+        font-size: 1.2em;
+        top: 260px;
+        left: 55px;
+    }
+}

@@ -1,0 +1,45 @@
+<isscript>
+	var ProductMgr = require('dw/catalog/ProductMgr');
+        var Product = ProductMgr.getProduct(pdict.product.id);
+		var recommendations = Product.getOrderableRecommendations(1).iterator();
+		var recProducts = new dw.util.ArrayList();
+		var maxRecs = 20, counter = 0;
+
+		while( recommendations.hasNext() )
+		{
+			var recommendation = recommendations.next();
+			var recommendedProduct = recommendation.getRecommendedItem();
+
+			recProducts.add( recommendedProduct );
+
+			if(++counter >= maxRecs)
+			{
+				break;
+			}
+		}
+</isscript>
+
+<isif condition="${recProducts.size() > 0}">
+ <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/recommend.js');
+</isscript>
+<h2 class="title d-none d-sm-block">${Resource.msg('pdp.recommend.heading','account',null)}</h2>
+<div class="wrapper">
+<ul class="carousel">
+<isloop items="${recProducts}" var="product" status="st">
+     <li class="card" id="${st.count}">
+        <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'swatches', true, 'ratings', true)}" />
+    </li>
+	<isif condition="${st.last}">
+		<isset name="count" value="${st.count}" scope="page" />
+	</isif>
+</isloop>
+</ul>
+<a href="#1"><i id="left" class="fa fa-arrow-circle-left fa-2x arrow1"></i></a>
+<a href="${"#"+count}"><i id="right" class="fa fa-arrow-circle-right fa-2x arrow2"></i></a>
+</div>
+</isif>
+
+
+

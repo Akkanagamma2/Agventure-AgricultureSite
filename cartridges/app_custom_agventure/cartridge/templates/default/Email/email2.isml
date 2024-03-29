@@ -1,0 +1,11 @@
+<h2>Thank you for your Subscription</h2>
+<div style="padding-left:50px;">
+<p>${Resource.msg('catlanding.msg.summary1', 'account', null)}<br>
+   ${Resource.msg('catlanding.msg.summary2', 'account', null)}<br>
+   ${Resource.msg('catlanding.msg.summary3', 'account', null)}<br></p>
+<p>Get 45% off on Popular category!!!!!</p>
+<a href="https://zylt-001.dx.commercecloud.salesforce.com/on/demandware.store/Sites-Agventure-Site/default/SourceCodeRedirect-Start?src=subscription10" style="color:blue;">Shop Now</a>
+
+</div>
+<h3>Thank You,</h3>
+<h4>salesforce Team</h4>

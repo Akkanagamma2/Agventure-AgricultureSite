@@ -1,0 +1,52 @@
+@import "~base/components/productTiles";
+
+.ratings.SavedPrice{
+    top:-15px;
+}
+
+.SavedPricee{
+    color:rgb(33, 131, 33);
+    padding-left:1px;
+    @media (max-width: 543px) {
+        font-size: 0.8125em !important;
+    }
+    @media (max-width: 768px) and (min-width: 544px) {
+        font-size: 0.8675em !important;
+    }
+    @media (min-width: 992px) {
+        font-size: 0.90em;
+    }
+}
+.SavedImg{
+    height: 20px;
+    width: 20px;
+}
+
+.SavedPricee-pdp{
+    color:rgb(33, 131, 33);
+    padding-left:1px;
+    @media (max-width: 543px) {
+        font-size: 0.76em !important;
+    }
+    @media (max-width: 768px) and (min-width: 544px) {
+        font-size: 0.88em !important;
+    }
+    @media (min-width: 992px) {
+        font-size: 1em;
+    }
+}
+.SavedImg-pdp{
+    @media (max-width: 543px) {
+        height: 20px !important;
+        width: 20px !important;
+    }
+    @media (max-width: 768px) and (min-width: 544px) {
+        height: 20px !important;
+        width: 20px !important;
+    }
+    @media (min-width: 992px) {
+        height: 25px;
+        width: 25px;
+    }
+
+}

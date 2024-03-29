@@ -1,0 +1,8 @@
+<isdecorate template="common/layout/page">
+
+
+    <h2>Thank you for your Subscription</h2>
+    <p/>  <p/>
+    <p style="padding-left:50px;">Please check the E-mail for more information.</p>
+    <a href="https://zylt-001.dx.commercecloud.salesforce.com/on/demandware.store/Sites-Agventure-Site/default/Home-Show" style="color:blue; padding-left:1100px;">Go back to homePage</a>
+</isdecorate>

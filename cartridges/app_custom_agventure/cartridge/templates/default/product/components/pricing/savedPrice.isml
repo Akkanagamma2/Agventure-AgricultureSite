@@ -1,0 +1,3 @@
+<isif condition="${pdict.name !== null}">
+        <p class="SavedPricee"><img class="SavedImg" src="${URLUtils.staticURL('/images/save-money.png')}" alt="price" /> Saved Price ${pdict.price}</p>
+</isif>

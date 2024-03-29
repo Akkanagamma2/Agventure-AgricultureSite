@@ -1,0 +1,87 @@
+@import "~base/components/header";
+.navbar-header {
+    height: 5.375em; /* 70/16 */
+
+    .user,
+    .country-selector,
+    .search,
+    .minicart {
+        display: inline-block;
+        margin: 1.515em -0.5em -0.5em 0.5em;
+    }
+
+    .user,
+    .country-selector,
+    .minicart,
+    .navbar-toggler {
+        line-height: 2.25em; /* 36/16 */
+        height: auto;
+    }
+
+    .hidden-md-down{
+        display:inline-block;
+    }
+    .minicart{
+        display:block;
+        float:right;
+        font-size:18px;
+    }
+    .profilee{
+        font-size:26px;
+        padding-top: 5px;
+    }
+    .profil {
+        font-size:24px;
+        padding-top: 5px;
+    }
+
+
+    .navbar-toggler {
+        font-size: 1.6em;
+        width: auto;
+    }
+
+    .user {
+        position: relative;
+
+        .popover {
+            position: absolute;
+            display: none;
+            padding: 1em;
+            top: 85%;
+            left: 0;
+
+            a {
+                white-space: nowrap;
+                margin-bottom: 0.5em;
+            }
+
+            &::before {
+                left: 1.5rem;
+            }
+
+            &::after {
+                left: 1.5rem;
+            }
+
+            &.show {
+                display: block;
+            }
+        }
+    }
+}
+.slide-up {
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    max-height: 80px;
+    overflow: hidden;
+
+    &.hide {
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    }
+}

@@ -1,0 +1,108 @@
+@import "~base/skin/skin";
+
+.main-menu {
+    background-color: var(--skin-banner-background-color-1);
+    border-top: 1px solid lightgray;
+    border-bottom: 5px solid lightgray;
+}
+
+.banner-color {
+    background-color: var(--skin-banner-background-color-1);
+}
+
+.header-banner {
+    background-color: rgb(34,52,46);
+    color: var(--skin-banner-text-color-1);
+}
+
+.header-banner .close-button .close {
+    background-color: var(--skin-primary-color-1);
+}
+
+h1.header.page-title,
+h1.header.page-title::before {
+    background-color: rgba(0,0,0,.5);
+    color: var(--skin-heading-color-1-invert);
+    padding: 20px 20px 20px 20px;
+    text-align: left;
+}
+
+.navbar,
+.navbar .nav-item,
+.navbar .nav-item a,
+.navbar .nav-item.dropdown,
+.navbar .nav-item.dropdown a,
+.dropdown-menu,
+.dropdown-menu a {
+    color: black;
+
+    @media (min-width: 769px) { // stylelint-disable-line
+        color: black;
+    }
+}
+
+.navbar .nav-item.dropdown,
+.navbar .nav-item.dropdown .dropdown-menu.show {
+    color: black;
+}
+
+.navbar .nav-item.dropdown .dropdown-menu.show {
+    background-color: var(--skin-selectbox-background-color-1);
+
+    a,
+    .nav-item {
+        color: black;
+    }
+}
+
+.nav-item .nav-link:hover,
+.nav-item .nav-link:focus,
+.nav-item.show .nav-link {
+    background-color: var(--skin-menu-color-1-invert);
+    color: black !important;
+}
+
+.btn-primary {
+    background-color: #{var(--skin-primary-color-1)};
+    border-color: #{var(--skin-primary-color-1)};
+    color: var(--skin-primary-color-invert-1);
+}
+.login-g{
+    background-color: rgb(26, 143, 46) !important;
+    border-color: darkgreen;
+    color: var(--skin-primary-color-invert-1);
+}
+.login-g:hover{
+    color: rgb(3, 87, 17) !important;
+    border-color: darkgreen !important;
+    background-color: white !important;
+}
+
+.btn-primary:hover {
+    color: #{var(--skin-primary-color-1)};
+    border-color: #{var(--skin-primary-color-1)};
+    background-color: var(--skin-primary-color-invert-1);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    background-color: var(--skin-primary-color-1);
+    border-color: var(--skin-primary-color);
+    color: var(--skin-primary-color-invert-1);
+    opacity: 0.5;
+}
+
+.btn-outline-primary {
+    color: black;
+    border-color: black;
+    background-color: white;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    background-color:  rgb(26, 143, 46);
+    border-color: darkgreen;
+}
+a.fa{
+    color: lightblue;
+}

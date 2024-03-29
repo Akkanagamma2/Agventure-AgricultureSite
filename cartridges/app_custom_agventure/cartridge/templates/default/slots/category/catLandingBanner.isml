@@ -1,0 +1,21 @@
+<isinclude template="/components/modules" />
+<isif condition="${slotcontent}">
+    <iscomment> Render a tile of the category Name and the Category Landing Slot Image field </iscomment>
+
+    <isloop items="${slotcontent.content}" var="category">
+        <div class="hero slant-down"
+            <isif condition="${category.custom.slotBannerImage.getURL()}">
+                style="background-image: url(${category.custom.slotBannerImage.getURL()})"
+            </isif>
+        >
+            <a href="${URLUtils.url('Search-Show', 'cgid', category.ID)}" title="${category.displayName}">
+                <h1 class="page-title">
+                    <isprint value="${category.displayName}" encoding="htmlcontent"/>
+                    <p class="Agventure-title">${Resource.msg('catlanding.msg.summary1', 'account', null)}<br>
+                    ${Resource.msg('catlanding.msg.summary2', 'account', null)}<br>
+                    ${Resource.msg('catlanding.msg.summary3', 'account', null)}<br></p>
+                </h1>
+            </a>
+        </div>
+    </isloop>
+</isif>

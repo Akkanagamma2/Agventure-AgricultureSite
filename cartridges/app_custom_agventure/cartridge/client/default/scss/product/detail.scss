@@ -1,0 +1,87 @@
+
+@import "~base/product/detail";
+
+.carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .arrow1:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .arrow1:disable{
+    display: none;
+  }
+  .arrow2:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .arrow2.inactive{
+    display: none;
+  }
+  .arrow1{
+    left: 0px;
+  }
+  .arrow2{
+    right: -22px;
+  }
+  .wrapper{
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+  }
+  .arrow1, .arrow2{
+  top: 30%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+  .card{
+  height: 100%;
+  padding:0px 30px 0px 30px;
+  list-style: none;
+  cursor: pointer;
+  flex-direction: column;
+  border-color:white;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  @media screen and (max-width: 900px){
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px)!important;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .wrapper .carousel {
+      grid-auto-columns: 100% !important;
+    }
+  }

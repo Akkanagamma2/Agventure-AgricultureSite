@@ -1,0 +1,90 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/login.css');
+        assets.addJs('/js/login.js');
+    </isscript>
+
+    <div class="hero slant-down login-banner">
+        <isprint value="${var}" encoding="on" />
+    </div>
+    <div class="container login-page">
+        <!---Breadcrumbs--->
+      <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+        <div class="row justify-content-center equal-height">
+            <div class="col-sm-8 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="login-form-nav">
+                            <div class="tab-content">
+                                <div class="tab-pane ${pdict.navTabValue === 'login' ? 'active' : ''}" id="login" role="tabpanel" aria-labelledby="login-tab">
+                                    <h1 class="login-forms">${Resource.msg('link.header.login.module', 'login', null)}</h1>
+                                    <isinclude template="account/components/oauth" />
+                                        <div class="EmailSignIn">
+                                            ${Resource.msg('label.email.sign.in', 'registration', null)}
+                                        </div>
+                                    <isinclude template="account/components/loginForm" />
+                                    <isinclude template="account/password/requestPasswordResetModal"/>
+                                    <div class="privacy-policy">
+                                        ${Resource.msg('description.privacypolicy.registration.one', 'registration', null)}
+                                        <a href="https://zylt-001.dx.commercecloud.salesforce.com/s/Agventure/Terms+of+Service.html" class="login-account">
+                                            ${Resource.msg('link.privacypolicy.registration.two', 'registration', null)}
+                                        </a>
+                                        ${Resource.msg('description.privacypolicy.registration.two', 'registration', null)}
+                                        <a href="https://zylt-001.dx.commercecloud.salesforce.com/s/Agventure/Privacy-Policy.html" class="login-account">
+                                            ${Resource.msg('link.privacypolicy.registration.one', 'registration', null)}
+                                        </a>
+                                        ${Resource.msg('description.privacypolicy.registration.three', 'registration', null)}
+                                        <a
+                                            <isif condition="${pdict.navTabValue === 'register'}">
+                                                class="nav-l login-account"
+                                            <iselse>
+                                                class="nav-l login-account"
+                                            </isif>
+                                            href="#register" data-toggle="tab" role="tab" aria-controls="register" aria-selected="false" id="register-tab">
+                                            ${Resource.msg('link.privacypolicy.registration.three', 'registration', null)}
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane ${pdict.navTabValue === "register" ? 'active' : ''}" id="register" role="tabpanel" aria-labelledby="register-tab">
+                                    <h1 class="login-forms">${Resource.msg('link.header.register.module', 'login', null)}</h1>
+                                    <isinclude template="account/components/oauth" />
+                                        <div class="EmailSignIn">
+                                            ${Resource.msg('label.email.sign.in', 'registration', null)}
+                                        </div>
+                                    <isinclude template="account/components/registerForm" />
+                                    <div class="privacy-policy">
+                                        ${Resource.msg('description.privacypolicy.registration.one', 'registration', null)}
+                                        <a href="https://zylt-001.dx.commercecloud.salesforce.com/s/Agventure/Terms+of+Service.html" class="login-account">
+                                            ${Resource.msg('link.privacypolicy.registration.two', 'registration', null)}
+                                        </a>
+                                        ${Resource.msg('description.privacypolicy.registration.two', 'registration', null)}
+                                        <a href="https://zylt-001.dx.commercecloud.salesforce.com/s/Agventure/Privacy-Policy.html" class="login-account">
+                                            ${Resource.msg('link.privacypolicy.registration.one', 'registration', null)}
+                                        </a>
+                                        ${Resource.msg('description.privacypolicy.registration.four', 'registration', null)}
+                                        <a
+                                            <isif condition="${pdict.navTabValue === 'login'}">
+                                                class="nav-l login-account"
+                                            <iselse>
+                                                class="nav-l login-account"
+                                            </isif>
+                                            href="${URLUtils.url('Login-Show')}">
+                                            ${Resource.msg('link.privacypolicy.registration.four', 'registration', null)}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-6">
+                <div class="card">
+                    <isinclude template="account/components/trackOrderForm" />
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

@@ -1,0 +1,58 @@
+<isscript>
+
+
+        var ArrayList = require('dw/util/ArrayList');
+        var list = new ArrayList();
+        list.add("Live Plants");
+        list.add("Seeds");
+        list.add("Pipe");
+        list.add("Sprinkler");
+        list.add("Water Pump");
+        list.add("Fruit Harvester/Plucker");
+        list.add("Garden Tools");
+        list.add("Brush Cutter");
+        list.add("Pellet Machine");
+        list.add("Power reaper");
+        list.add("Rice Mill");
+        list.add("Sprayer");
+        list.add("Sugarcane Machine");
+        list.add("Weeder");
+        list.add("Agriculture Tools");
+        list.add("Irrigation");
+        list.add("Bactericides");
+        list.add("Fungicides");
+        list.add("Bio Fungicides");
+        list.add("Insecticides");
+        list.add("Bio Insecticides");
+        list.add("Bio/Organic Fertilizers");
+        list.add("Chemical Fertilizers");
+        list.add("Bio Activators");
+        list.add("Plant Enhancers");
+        list.add("Plant Growth Promoters");
+</isscript>
+
+<div class="search hidden-xs-down site-search" style="margin-left:-300px; margin-top:25px; position: relative;
+    height: 2.5em;">
+    <form action="${URLUtils.abs("Search-Show",'cgid')}">
+        <select id="category" name="cgid" style="position: relative;height: 2em; border:1px solid #ced4da;">
+            <option value="All Categories"> All Categories </option>
+            <isloop items="${list}" var="cat" status="loopstatus">
+                <option value="${cat}">
+                ${cat}
+                </option>
+            </isloop>
+        </select>
+        <button type="submit" name="search-button" class="fa fa-search" aria-label="${Resource.msg('label.header.search.go', 'common', null)}"></button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+

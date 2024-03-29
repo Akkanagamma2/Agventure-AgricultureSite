@@ -1,0 +1,20 @@
+.search-input {
+    margin-top:-35px;
+    margin-right:-100px;
+}
+.search-all {
+    position: relative;
+    height: 2.2em;
+    border:1px solid #ced4da;
+    margin-top:0px;
+    background-color:#ced4da;
+    @media (max-width: 543px) {
+        margin-left:-410px !important;
+    }
+    @media (max-width: 768px) and (min-width: 544px) {
+        margin-left:-390px !important;
+    }
+    @media (min-width: 992px) {
+        margin-left:-510px;
+    }
+}
